@@ -1,0 +1,71 @@
+scientific	science
+loyal	loyalty
+honest	other people's honesty
+wise	wisdom
+trustworthy	trust
+sincere	sincerity
+wealthy	wealth
+religious	your religion
+humble	humility
+dependable	dependability
+intellectually stimulating	intellectual stimulation
+patient	other people's patience
+weak	weakness
+self disciplined	self-discipline
+musical	music
+spiritual	spirituality
+respectful	respect
+cowardly	cowardice
+financially stable	your financial stability
+frugal	frugality
+forgiving	forgiveness
+organized	organization
+well read	literature
+mentally healthy	mental health
+generous	generosity
+empathetic	empathy
+responsible	responsibility
+practical	practicality
+logical	logic
+artistic	art
+punctual	punctuality
+fair	fairness
+composed	composure
+tactful	tact
+compassionate	compassion
+cautious	caution
+aggressive	aggression
+efficient	efficiency
+tolerant	tolerance
+politically conservative	conservative ideology
+pessimistic	pessimism
+productive	productivity
+strong	strength
+monogamous	monogamy
+encouraging	encouragement
+resilient	resilience
+cooperative	cooperation
+talented	talent
+patriotic	patriotism
+knowledgeable	knowledge
+romantic	romance
+embarrassing	your embarrassment
+creative	creativity
+adaptable	adaptability
+greedy	greed
+intelligent	intelligence
+politically liberal	liberal ideology
+boring	boredom
+competent	competence
+kind	kindness
+independent	independence
+goal oriented	other people's goals
+passionate	passion
+ambitious	ambition
+outdoorsy	nature
+vulnerable	vulnerability
+ignorant	ignorance
+courageous	courage
+anxious	anxiety
+sexually attractive	sexual attraction
+jealous	jealousy
