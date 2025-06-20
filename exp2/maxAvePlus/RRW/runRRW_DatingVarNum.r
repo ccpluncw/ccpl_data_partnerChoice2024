@@ -56,6 +56,9 @@ tmp.df<-analysisReadyData
 source("modelspecs_DatingVarNum.r")
 modelNames <- names(allModels)
 
+fileTagShortName <- paste(ExpName, sep="_")
+fileTagFinal <- paste(format(Sys.time(), "%b_%d_%Y_%H-%M"), fileTagShortName, sep="_")
+
 ### this loop runs the smartGridSearch to optimize free parameters
 df.runStats <- NULL
 if(runSmartGridSearch) {
@@ -83,19 +86,19 @@ if(runSmartGridSearch) {
       df.runStats <- bind_rows(df.runStats, df.tmp.stats)
 
       rrwPlotSGSoutput(run.list$df.fitted, tmpModelList, dataRtCol = "rt", dataPhitCol = "pHit", rtFitCol = "rtFit", pHitFitCol = "pCross", correctCol = "correct", overlapCol = "overlap", fileTag = fileTag,numSimsToPlot = numSimsToAverage)
+
+      setwd(mainDir)
+
+      #write the runstats data after each model - just in case the computer bombs, you dont want to loose everything.
+      filename <- paste(fileTag, "freeParameterRunStats.txt", sep="_")
+      write.table(df.runStats, filename, append = appendRunStats, col.names=T, row.names=F, quote=F, sep="\t")
     }
-
-    setwd(mainDir)
-
-    #write the runstats data after each model - just in case the computer bombs, you dont want to loose everything.
-    filename <- paste(ExpName, fileTag, "freeParameterRunStats.txt", sep="_")
-    write.table(df.runStats, filename, append = appendRunStats, col.names=T, row.names=F, quote=F, sep="\t")
 
   }
 }
 
 #write the final free parameter runstats dataset
-filename <- paste(ExpName, fileTag, "freeParameterRunStats.txt", sep="_")
+filename <- paste(fileTagFinal, "freeParameterRunStats.txt", sep="_")
 write.table(df.runStats, filename, append = appendRunStats, col.names=T, row.names=F, quote=F, sep="\t")
 
 
@@ -126,15 +129,17 @@ if(!is.null(allFixedModels)) {
 
 
       rrwPlotSGSoutput(run.list$df.fitted, tmpModelList, dataRtCol = "rt", dataPhitCol = "pHit", rtFitCol = "rtFit", pHitFitCol = "pCross", correctCol = "correct", overlapCol = "overlap", fileTag = fileTag,numSimsToPlot = numSimsToAverage)
-    }
-    setwd(mainDir)
 
-    #write the runstats data after each model - just in case the computer bombs, you dont want to loose everything.
-    filename <- paste(ExpName, fileTag, "fixedParameterRunStats.txt", sep="_")
-    write.table(df.runStats, filename, append = appendRunStats, col.names=T, row.names=F, quote=F, sep="\t")
+      setwd(mainDir)
+
+      #write the runstats data after each model - just in case the computer bombs, you dont want to loose everything.
+      filename <- paste(fileTag, "fixedParameterRunStats.txt", sep="_")
+      write.table(df.runStats, filename, append = appendRunStats, col.names=T, row.names=F, quote=F, sep="\t")
+    }
+
   }
 }
 
 #write the final fixed parameter runstats dataset
-filename <- paste(ExpName, fileTag, "fixedParameterRunStats.txt", sep="_")
+filename <- paste(fileTag, "fixedParameterRunStats.txt", sep="_")
 write.table(df.runStats, filename, append = appendRunStats, col.names=T, row.names=F, quote=F, sep="\t")

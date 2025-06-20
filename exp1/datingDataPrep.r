@@ -59,7 +59,8 @@ write.table(analysisReadyData.sn, file="analysisReadyData.sn.txt", append=FALSE,
 df.dPrime <- ch.moralsDprimeAnalysis(analysisReadyData.sn, "overlapRound", "correct", c(1,0), "targetPresent", c(TRUE,FALSE), resCol, params = params, filenameID = "gp")
 
 #Do an item analysis on the data.  Doesn't matter whether use group or sn data - no rt analysis is done
- itemAnalDat <- ch.moralsItemChoiceAnalysis(analysisReadyData.sn, "IA.1", "IB.1", "overlapRound", "dirOverlap","keyDef", respChoiceVal = respChoiceVals, params = params, saveFigures = T)
+ itemAnalDat <- ch.moralsItemChoiceAnalysis(analysisReadyData.sn, "IA.1", "IB.1", "overlapRound", "dirOverlap","keyDef", respChoiceVal = respChoiceVals, params = params, saveFigures = T) 
+ 
  #### For experiments with catagory variable manipulations (e.g., different groups), do an analysis
  #### by group
      grpFitModels <- ch.moralsPlotsByGrpsAndGetModels(analysisReadyData.sn[analysisReadyData.sn$Gender != "Other",], c("Gender"), resCol, "overlapRound", "keyDef", yesNoVal = respChoiceVals, "correct", c(1,0), "targetPresent", c(TRUE,FALSE), useTwoParameterModel = useTwoParameterModel, params = params, minNperOverlap = params$minOverlapN)

@@ -144,7 +144,8 @@ allModels <- list(liSEModelList = liSEModelList,
   tqBliSEModelList = tqBliSEModelList,
   tqVCliSEModelList = tqVCliSEModelList,
   tqVCtqBliSEModelList = tqVCtqBliSEModelList,
-  tqVCtqBModelList = tqVCtqBModelList
+  tqVCtqBModelList = tqVCtqBModelList,
+  tqBModelList = tqBModelList
 )
 
 allFixedModels <- NULL

@@ -7,7 +7,7 @@ cleanOverlapFile <- FALSE
 #set up the new RT variables
 fitCol <- "fit.RT"
 resCol <- "res.RT"
-useTwoParameterModel <- FALSE
+useTwoParameterModel <- TRUE
 overlapDataIsComplete <- TRUE
 responseChoiceVals <- c("Left", "Right")
 item1cols <- c("IA.1.org", "IA.2.org")
